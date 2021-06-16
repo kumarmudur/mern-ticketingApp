@@ -16,5 +16,13 @@ build:
         manual:
           - src: 'auth/src/**/*.ts'
             dest: .
+    - image: kumarmudur/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.js'
+            dest: .
   
     
