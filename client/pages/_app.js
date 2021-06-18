@@ -1,6 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.css';
 
-export default ({ Component, pageProps }) => {
-    return <Component { ...pageProps }/>
+import buildClient from '../api/build-client';
+
+const AppComponent = ({ Component, pageProps }) => {
+    return (
+        <div>
+            <Component { ...pageProps }/>
+        </div>
+    )
 };
 
+AppComponent.getInitialProps = () => {
+
+};
+
+export default AppComponent;
